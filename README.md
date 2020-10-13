@@ -66,4 +66,6 @@ screen /dev/cu.usbmodem141401 9600
 
 ## Resources
 
+https://www.arduino.cc/en/Reference/ArduinoBLE
+
 https://mjoldfield.com/atelier/2009/02/arduino-cli.html
