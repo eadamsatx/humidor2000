@@ -53,5 +53,5 @@ jobs:
           arduino-cli core update-index
           arduino-cli core install arduino:mbed@1.3.0
       - name: Build arduino:mbed
-        run: arduino-cli compile --fqbn arduino:mbed ./arduino/humidor2000 --warnings more
+        run: arduino-cli compile --fqbn arduino:mbed:nano33ble  ./arduino/humidor2000 --warnings more
 
