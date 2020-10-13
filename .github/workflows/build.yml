@@ -33,7 +33,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project
   compile:
-    name: Test 16u2 ${{ matrix.sketch }} for ${{ matrix.board }}
+    name: Test compile
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -42,8 +42,8 @@ jobs:
         run: |
           mkdir -p "$HOME/Arduino/libraries"
           ln -s "$PWD" "$HOME/Arduino/libraries/."
-      - name: Install Adafruit_NeoPixel
-        run: arduino-cli lib install Adafruit_NeoPixel@1.6.0
+      - name: Update lib index
+        run: arduino-cli lib update-index
       - name: Install Arduino_HTS221
         run: arduino-cli lib install Arduino_HTS221@1.0.0
       - name: Install ArduinoBLE
@@ -52,6 +52,6 @@ jobs:
         run: |
           arduino-cli core update-index
           arduino-cli core install arduino:mbed@1.3.0
-      - name: Build ${{ matrix.sketch }} for ${{ matrix.board }}
+      - name: Build arduino:mbed
         run: arduino-cli compile --fqbn arduino:mbed ./arduino/humidor2000 --warnings more
 
