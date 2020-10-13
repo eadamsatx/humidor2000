@@ -1,6 +1,29 @@
 # humidor2000
 Overengineered humidor maintenance software.
 
+
+## Quick start 
+
+### Setup
+
+Install required tools with [Homebrew](https://brew.sh/):
+
+```
+brew bundle
+```
+
+### Arduino
+```
+make compile
+```
+
+
+### Python
+
+
+
+
+
 ## Running with arduino-cli
 
 Aruidno libraries required:

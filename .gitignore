@@ -54,3 +54,6 @@ dkms.conf
 
 **/build
 **/sketch.json
+
+
+Brewfile.lock.json
